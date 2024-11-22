@@ -1,0 +1,49 @@
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* 1rem = 16px */
+/* root === base === html */
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 3rem; /* 48px */
+    padding: 1rem; /* 16px */
+}
+
+.card-box {
+    background-color: chartreuse;
+    padding: 24px;
+    width: 90vw;
+    margin: 0 auto;
+    font-size: 9px;
+
+}
+
+.card-box p {
+    font-size: 1.5em; /* 13,5px */
+}
+
+.container {
+    background-image: url('./garage.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;   
+}
+.container2 {
+    background-color: purple;
+    height: 100vh;
+}
+
+.container2 h1 {
+    font-size: clamp(56px, 10vw, 150px);
+    /* clamp(min, current, max) */
+    /* min : la valeur minimum de current  */
+    /* current : la valeur DYNAMIQUE (vw, vh, %) */
+    /* max : la valeur maximum de current */
+}
+
+svg {
+    width: 50px;
+}

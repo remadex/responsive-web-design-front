@@ -1,0 +1,104 @@
+body, div, p, h1, h2, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F1F1F1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+    margin: 16px 8px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 4px;
+    width: 25%;
+    max-width: 300px;
+    min-width: 30px;
+    height: 4px;
+    background-color: red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all .4s linear;
+}
+h1:hover::after {
+    transform: scaleX(1);
+}
+
+.card-box {
+    margin-top: 32px;
+    background-color: #F87060;
+    color: white;
+}
+
+.card-box img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.card-box .content {
+    padding: 12px 8px;
+}
+
+.card-box .content p {
+    margin: 24px 0;
+}
+
+.card-box .content button {
+    border: none;
+    display: block;
+    margin: 0 auto 16px;
+    background-color: transparent;
+}
+
+.card-box .content button a {
+    background-color: #102542;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.card-box .content button a:visited {
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .card-box {
+        display: flex;
+    }
+
+    .card-box img {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card-box {
+        background-color: #BF4E30;
+        max-width: 1280px;
+        margin: 32px auto 0;
+    }
+}
+
+@media print {
+    h1, button, a {
+        display: none;
+    }
+}
+
+@media print and (orientation: landscape) {
+    .card-box {
+        display: flex;
+    }
+}

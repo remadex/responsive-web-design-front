@@ -1,0 +1,75 @@
+body, p, button, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f1f1f1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+}
+
+.card-box {
+    /* max-width: 400px; Commenter pour le grid */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-box img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card-box .content {
+    background-color: #3E505B;
+    color: white;
+    padding: 1rem 0.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.card-box .content p {
+    margin: 1.25rem 0;
+    text-align: justify;
+    line-height: 1.25rem;
+    flex-grow: 1;
+}
+.card-box .content button {
+    background-color: #8AB0AB;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.25rem 1rem;
+}
+
+/* .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1rem 3rem;
+} */
+
+.container {
+    display: grid;
+    gap: 1rem 3rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
