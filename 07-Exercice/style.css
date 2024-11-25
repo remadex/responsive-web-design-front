@@ -1,0 +1,63 @@
+body, div, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e4e4e7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .card:nth-child(odd) {
+    background-color: #71717a;
+    color: white;
+}
+
+.container .card p {
+    padding: 1rem 0.75rem;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+}
+
+.container .card img {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (min-width: 768px) {
+    .container .card {
+        flex-direction: row;
+    }
+    .container .card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .container .card img {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+    .container .card {
+        flex-direction: column;
+    }
+    .container .card:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    .container .card img {
+        width: 100%;
+    }
+}
