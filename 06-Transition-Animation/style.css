@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    background-color: #ecf0f1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: .4s infinite  ease-in alternate-reverse adieulesyeux;
+}
+
+body > * {
+    margin: 60px;
+}
+
+button {
+    display: block;
+    width: 200px;
+    height: 45px;
+    background-color: #10B981;
+    color: #1E40AF;
+    text-transform: uppercase;
+    border: 3px solid #1E40AF;
+    /* transition: all ease-in-out 1s 2s; */
+    /* 
+        1: all correspond à l'instruction qu'on cible dans ce cas-ci ce sera toutes les instructions.
+        (on peut cibler qu'une seule instruction CSS comme le background-color)
+        2: Le timing function. C'est une courbe qui est représenté par l'avancement de notre transition dans le temps
+        3: La durée de notre animation
+        (4): Le délai, ça correspond à l'attente avant d'enclencher l'animation
+    */
+    transition: background-color ease-in-out .8s, color ease-in .4s .6s;
+}
+
+.btn2 {
+    transition: all .4s ease;
+    opacity: 1;
+}
+.btn2:hover {
+    opacity: 0;
+    transform: translateX(400px);
+}
+
+button:hover {
+    background-color: #1E40AF;
+    color: #10B981;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+
+    /* animation: 3s infinite alternate animationdebg; */
+    /* 
+        1: Le temps que va prendre l'animation
+        2: Le nombre de répétition
+        3: La timing function
+        4: Le sens de notre animation et dans ce cas-ci l'animation va alterner le sens à chaque répétition
+        5: Le nom de l'animation
+    */
+    animation: .4s infinite ease-in alternate adieulesyeux;
+}
+
+@keyframes animationdebg {
+    from {
+        background-color: green;
+        transform: translateX(0)
+    }
+
+    to {
+        background-color: purple;
+        transform: translateX(400px);
+    }
+}
+
+@keyframes adieulesyeux {
+    0% {
+        background-color: chartreuse;
+        transform: translateX(0);
+    }
+    25% {
+        background-color: fuchsia;
+        transform: translateX(300px);
+    }
+    50% {
+        background-color: red;
+        transform: translateX(600px);
+    }
+    75% {
+        background-color: yellow;
+        transform: translateX(900px);
+    }
+    100% {
+        background-color: cyan;
+        transform: translateX(1200px);
+    }
+}
